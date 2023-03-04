@@ -1,0 +1,18 @@
+package pages;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.PageFactory;
+
+import base.TestBase;
+
+public class HomePage extends TestBase {
+	JavascriptExecutor js = (JavascriptExecutor)driver;
+	
+	public HomePage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	public void scroll() {
+		js.executeScript("scroll(0,1680)");
+	}
+}

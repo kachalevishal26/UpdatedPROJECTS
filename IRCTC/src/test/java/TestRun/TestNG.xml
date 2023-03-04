@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="IRCTC">
+	<listeners>
+		<listener class-name="Analyzer.MyTransformer"/>
+		<listener class-name="com.test.utils.WebListener"/>
+	</listeners>
+	
+	<test name="SearchTrain" enabled="false">
+		<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="com.test.testcases.SearchTrainTest">
+				<methods>
+					<include name="selectLocation"/>
+					<include name="selectDate"/>
+					<include name="selectClass"/>
+					<include name="selectChkBox"/>
+					<include name="getTrainCount"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="SearchBus" enabled="false">
+		<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="com.test.testcases.SearchBusTest">
+				<methods>
+					<include name="selectLocations"/>
+					<include name="selectDate"/>
+					<include name="busCount"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="SearchFlight" enabled="true">
+		<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="com.test.testcases.SearchFlightTest">
+				<methods>
+					<include name="locations"/>
+					<!--					<include name="selectDate"/>-->
+					<!--					<include name="busCount"/>-->
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

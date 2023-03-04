@@ -1,0 +1,148 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1530900,
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "User Launch url",
+            "match": {
+              "location": "StepDefs.StepDef.user_launch_url()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-07-29T05:06:59.274Z",
+        "before": [
+          {
+            "result": {
+              "duration": 413495400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AppHooks.read_ConfigReader()"
+            }
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 99\nCurrent browser version is 103.0.5060.134 with binary path C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027SEVEN-BITS\u0027, ip: \u0027192.168.0.104\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.1\u0027\nDriver info: driver.version: ChromeDriver\nremote stacktrace: Backtrace:\n\tOrdinal0 [0x00D99943+2595139]\n\tOrdinal0 [0x00D2C9F1+2148849]\n\tOrdinal0 [0x00C24528+1066280]\n\tOrdinal0 [0x00C442C3+1196739]\n\tOrdinal0 [0x00C3FE37+1179191]\n\tOrdinal0 [0x00C3D6F1+1169137]\n\tOrdinal0 [0x00C70530+1377584]\n\tOrdinal0 [0x00C7018A+1376650]\n\tOrdinal0 [0x00C6B806+1357830]\n\tOrdinal0 [0x00C46086+1204358]\n\tOrdinal0 [0x00C46F96+1208214]\n\tGetHandleVerifier [0x00F3B232+1658114]\n\tGetHandleVerifier [0x00FF312C+2411516]\n\tGetHandleVerifier [0x00E2F261+560433]\n\tGetHandleVerifier [0x00E2E366+556598]\n\tOrdinal0 [0x00D3286B+2173035]\n\tOrdinal0 [0x00D375F8+2192888]\n\tOrdinal0 [0x00D376E5+2193125]\n\tOrdinal0 [0x00D411FC+2232828]\n\tBaseThreadInitThunk [0x763E6739+25]\n\tRtlGetFullPathName_UEx [0x76F68FEF+1215]\n\tRtlGetFullPathName_UEx [0x76F68FBD+1165]\n\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)\r\n\tat org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)\r\n\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)\r\n\tat java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)\r\n\tat java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)\r\n\tat java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)\r\n\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)\r\n\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)\r\n\tat java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)\r\n\tat java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)\r\n\tat java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)\r\n\tat org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.\u003cinit\u003e(RemoteWebDriver.java:131)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:181)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:168)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:123)\r\n\tat WebDriverFactory.DriverFactory.init_Driver(DriverFactory.java:31)\r\n\tat Hooks.AppHooks.launchBrowser(AppHooks.java:40)\r\n",
+              "duration": 1298024900,
+              "status": "failed"
+            },
+            "match": {
+              "location": "Hooks.AppHooks.launchBrowser()"
+            }
+          },
+          {
+            "result": {
+              "duration": 7466900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefs.StepDef.setUp()"
+            }
+          }
+        ],
+        "line": 28,
+        "name": "Search Product",
+        "description": "",
+        "id": "cucumber-bdd-assignment;search-product",
+        "after": [
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)\" because \"ts\" is null\r\n\tat Hooks.AppHooks.failedScenario(AppHooks.java:52)\r\n",
+              "duration": 2400400,
+              "status": "failed"
+            },
+            "match": {
+              "location": "Hooks.AppHooks.failedScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException: Cannot invoke \"org.openqa.selenium.WebDriver.quit()\" because \"this.driver\" is null\r\n\tat Hooks.AppHooks.tearDown(AppHooks.java:66)\r\n",
+              "duration": 1348500,
+              "status": "failed"
+            },
+            "match": {
+              "location": "Hooks.AppHooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "User Enters Items \"Faded\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Faded\"",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.StepDef.user_enters_items(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 30,
+            "name": "Get suggestion to user with entered Items i.e \"Faded\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Faded\"",
+                  "offset": 46
+                }
+              ],
+              "location": "StepDefs.StepDef.get_suggestion_to_user_with_entered_items_i_e(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@All"
+          },
+          {
+            "name": "@Search"
+          }
+        ]
+      }
+    ],
+    "name": "Cucumber BDD Assignment",
+    "description": "",
+    "id": "cucumber-bdd-assignment",
+    "keyword": "Feature",
+    "uri": "classpath:feature/assignment.feature",
+    "tags": [
+      {
+        "name": "@All",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

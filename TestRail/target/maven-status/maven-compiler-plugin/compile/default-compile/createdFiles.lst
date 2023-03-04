@@ -1,0 +1,4 @@
+pages\SearchTrain.class
+analyzer\RetryAnalyzer.class
+base\TestBase.class
+analyzer\MyTransformer.class

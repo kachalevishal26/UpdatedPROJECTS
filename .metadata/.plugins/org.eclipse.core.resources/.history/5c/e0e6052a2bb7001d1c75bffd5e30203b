@@ -1,0 +1,6 @@
+package Analyzer;
+
+import org.testng.IRetryAnalyzer;
+public class RetryAnalyzer implements IRetryAnalyzer {
+	
+}

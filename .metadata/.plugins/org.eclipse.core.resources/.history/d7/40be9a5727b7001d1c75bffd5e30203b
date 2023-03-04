@@ -1,0 +1,46 @@
+package pages;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import base.TestBase;
+
+public class LoginPage extends TestBase {
+	private static final Logger logger = LogManager.getLogger();
+	
+	@FindBy(xpath = "//header/div[1]/div[1]/ul[1]/li[2]/a[1]")
+	WebElement signInBtn;
+	
+	@FindBy(id = "email")
+	WebElement uName;
+	
+	@FindBy(id = "pass")
+	WebElement uPwd;
+	
+	@FindBy(id = "send2")
+	WebElement signIn;
+	
+	@FindBy(xpath = "(//span[@class='logged-in'])[1]")
+	WebElement welcomeMsg;
+	
+	public LoginPage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	public void navToLogin() {
+		signInBtn.click();
+	}
+	
+	public void login() {
+		uName.sendKeys("vishal@sbt.com");
+		uPwd.sendKeys("Vishal@26");
+		signIn.click();
+	}
+	
+	public boolean verifyLogin() {
+		return welcomeMsg.isDisplayed();
+	}
+}

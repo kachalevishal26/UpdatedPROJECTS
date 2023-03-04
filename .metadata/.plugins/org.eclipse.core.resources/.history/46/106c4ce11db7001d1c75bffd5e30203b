@@ -1,0 +1,12 @@
+package testcases;
+
+import base.TestBase;
+import pages.LoginPage;
+
+public class LoginPageTest extends TestBase {
+	LoginPage loginPage;
+	
+	public LoginPageTest() {
+		super();
+	}
+}

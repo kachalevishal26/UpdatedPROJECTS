@@ -1,0 +1,16 @@
+package testcases;
+
+import org.testng.annotations.BeforeTest;
+
+import base.TestBase;
+
+public class HomePageTest extends TestBase {
+	
+	@BeforeTest
+	public void setup() {
+		initialization("browser");
+		
+		homePage = new HomePage();
+	}
+	
+}

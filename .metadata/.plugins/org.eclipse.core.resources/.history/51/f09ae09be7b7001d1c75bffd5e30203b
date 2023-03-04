@@ -1,0 +1,7 @@
+package testdata;
+
+import base.TestBase;
+
+public class DataSupplier extends TestBase {
+	
+}

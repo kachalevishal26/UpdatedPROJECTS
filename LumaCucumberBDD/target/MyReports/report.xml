@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="25.258" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="home page features" name="verify the logo" time="5.719">
+<system-out><![CDATA[
+Given user is on homepage...................................................passed
+Given the logo should be visible............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="home page features" name="verify the menubar" time="4.818">
+<system-out><![CDATA[
+Given user is on homepage...................................................passed
+Given menubar should be visible.............................................passed
+When menubar section should contain.........................................passed
+Then section count should be 6..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="home page features" name="verify search bar" time="14.496">
+<system-out><![CDATA[
+Given user is on homepage...................................................passed
+Given search bar should be visible..........................................passed
+When enter some text it should show search suggestions......................passed
+And shopping cart should be visible.........................................passed
+]]></system-out>
+</testcase>
+</testsuite>

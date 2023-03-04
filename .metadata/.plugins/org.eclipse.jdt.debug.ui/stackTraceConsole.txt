@@ -1,0 +1,8 @@
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at stepdefinitions.HomePageSteps.enter_some_text_it_should_show_search_suggestions(HomePageSteps.java:72)
+	at ?.enter some text it should show search suggestions(file:///C:/Users/Asus/eclipse-workspace/LumaCucumberBDD/src/test/resources/features/Home.feature:24)
+

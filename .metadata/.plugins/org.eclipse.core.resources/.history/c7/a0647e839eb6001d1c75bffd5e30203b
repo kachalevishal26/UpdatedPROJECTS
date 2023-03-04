@@ -1,0 +1,12 @@
+package testcases;
+
+import base.TestBase;
+
+public class HomePage extends TestBase {
+	HomePage homePage;
+	
+	public HomePage() {
+		initialization(browser);
+		
+	}
+}

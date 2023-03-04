@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="GroupSuite">
+
+<!-- 
+	<groups>
+		<run>
+			<include name="functional" />
+		</run>
+	</groups>
+-->
+
+	<test name="groupTest">
+		<groups>
+			<!-- <define name="dailyBuild"> 
+				<include name="smoke" /> 
+				<include name="sanity"/> 
+				</define> 
+				<define name="weeklyBuild"> 
+				<include name="smoke" /> 
+				<include name="regression" /> 
+				<include name="sanity" /> 
+				<include name="functional" /> 
+				</define> -->
+
+			<run>
+
+				<!-- <include name="all"/> It will run all methods even the one which 
+					doesn't define group <include name="dailyBuild" /> <exclude name="functional"/> 
+					<include name="weeklyBuild" /> -->
+
+			</run>
+		</groups>
+		<classes>
+			<class name="com.vk.groupTest.ignoreTest1" />
+		</classes>
+	</test>
+
+
+<test name="regularExpression">
+		<groups>
+			<run>
+				<include name="windows.*" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.vk.groupTest.ignoreTest1">
+			</class>
+		</classes>
+	</test>
+
+	<test name="allTest">
+		<groups>
+			<run>
+				<include name="all" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.vk.groupTest.ignoreTest1">
+			</class>
+		</classes>
+	</test>
+
+	<test name="smokeTest">
+		<groups>
+
+			<run>
+				<include name="smoke" />
+			</run>
+
+		</groups>
+		<classes>
+			<class name="com.vk.groupTest.ignoreTest1" />
+		</classes>
+	</test>
+
+	<test name="regressionTest">
+		<groups>
+
+			<run>
+				<include name="regression" />
+			</run>
+
+		</groups>
+		<classes>
+			<class name="com.vk.groupTest.ignoreTest1" />
+		</classes>
+	</test>
+
+
+
+</suite>

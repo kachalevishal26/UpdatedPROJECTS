@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="18" time="261.464">
+    <testcase classname="accounts page feature" name="page title" time="16.153">
+        <system-out><![CDATA[Given user should be already logged in to the app...........................passed
+Given user is on the accounts page..........................................passed
+When user gets the page title...............................................passed
+Then page title should be "My account - My Store"...........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="accounts page feature" name="account section features" time="22.457">
+        <system-out><![CDATA[Given user should be already logged in to the app...........................passed
+Given user is on the accounts page..........................................passed
+When user gets the accounts section.........................................passed
+Then account section count should be 6......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Home page features" name="verify the logo visibility and its width and height" time="10.799">
+        <system-out><![CDATA[Given user is on the home page..............................................passed
+When the logo should be visible.............................................passed
+Then width and height of logo should be "350" and "99"......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Home page features" name="verify the category section and its count" time="11.075">
+        <system-out><![CDATA[Given user is on the home page..............................................passed
+When user gets the category "WOMEN" section.................................passed
+Then the category count should be 3.........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Home page features" name="verify the category section and its count 2" time="8.049">
+        <system-out><![CDATA[Given user is on the home page..............................................passed
+When user gets the category "DRESSES" section...............................passed
+Then the category count should be 3.........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Home page features" name="verify the category section and its count 3" time="8.544">
+        <system-out><![CDATA[Given user is on the home page..............................................passed
+When user gets the category "T-SHIRTS" section..............................passed
+Then the category count should be 3.........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Home page features" name="Search product" time="20.123">
+        <system-out><![CDATA[Given user is on the home page..............................................passed
+When tap on search button and enter "T-shirts" on it and select the suggested text.passed
+Then print the name of the product..........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="invalid logins" name="_2" time="14.964">
+        <system-out><![CDATA[Given user is on login page.................................................passed
+When user enters the username "" and password ""............................passed
+Then login failed and error message should be shown.........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="invalid logins" name="_3" time="12.548">
+        <system-out><![CDATA[Given user is on login page.................................................passed
+When user enters the username "abcdefgh" and password "abcdefgh"............passed
+Then login failed and error message should be shown.........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="invalid logins" name="_4" time="12.7">
+        <system-out><![CDATA[Given user is on login page.................................................passed
+When user enters the username "12345" and password "4561204"................passed
+Then login failed and error message should be shown.........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="invalid logins" name="_5" time="16.477">
+        <system-out><![CDATA[Given user is on login page.................................................passed
+When user enters the username "1" and password "0"..........................passed
+Then login failed and error message should be shown.........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="invalid logins" name="_6" time="22.242">
+        <system-out><![CDATA[Given user is on login page.................................................passed
+When user enters the username "kbc31@gmailcom" and password "kbc3107".......passed
+Then login failed and error message should be shown.........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="invalid logins" name="_7" time="12.882">
+        <system-out><![CDATA[Given user is on login page.................................................passed
+When user enters the username "kbc31gmail.com" and password "123"...........passed
+Then login failed and error message should be shown.........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="invalid logins" name="_8" time="17.303">
+        <system-out><![CDATA[Given user is on login page.................................................passed
+When user enters the username "vishal+1@sevenbits.in" and password "".......passed
+Then login failed and error message should be shown.........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="invalid logins" name="_9" time="17.827">
+        <system-out><![CDATA[Given user is on login page.................................................passed
+When user enters the username "" and password "123456"......................passed
+Then login failed and error message should be shown.........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="login page features" name="page title" time="11.571">
+        <system-out><![CDATA[Given user is on the login page.............................................passed
+When user gets the page title...............................................passed
+Then page title should be "Login - My Store"................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="login page features" name="forgot password link" time="11.012">
+        <system-out><![CDATA[Given user is on the login page.............................................passed
+Then forgot password link should be visible.................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="login page features" name="login with valid credentials" time="14.25">
+        <system-out><![CDATA[Given user is on the login page.............................................passed
+When user enters the username "vishal+1@sevenbits.in".......................passed
+And user enters the password "123456".......................................passed
+And user clicks the submit button...........................................passed
+And user gets the page title................................................passed
+Then page title should be "My account - My Store"...........................passed
+]]></system-out>
+    </testcase>
+</testsuite>

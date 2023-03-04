@@ -1,0 +1,64 @@
+package base;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.apache.commons.math3.geometry.spherical.twod.Edge;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class TestBase {
+	public static WebDriver driver;
+	public static Properties prop;
+	public String ExcelPath = "C:\\Users\\Asus\\eclipse-workspace\\TestLUMA\\src\\main\\java\\config\\config.properties";
+
+	public TestBase() {
+		FileInputStream file = null;
+		prop = new Properties();
+
+		try {
+			file = new FileInputStream(ExcelPath);
+			prop.load(file);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public static void initialization(String browser) {
+		System.out.println("Browser name is " + browser);
+		switch (browser) {
+		case "chrome":
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+			break;
+
+		case "firefox":
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+			break;
+
+		case "edge":
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
+			break;
+
+		case "chrome":
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+			break;
+
+		default:
+			break;
+		}
+	}
+}

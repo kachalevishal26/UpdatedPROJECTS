@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="IgnoreTest">
+	<test name="ignoreTestMCP">
+		<classes>
+			<class name="com.vk.demoTest.ignoreTest1" />
+			<class name="com.vk.demoTest.ignoreTest2" />
+		</classes>
+	</test>
+</suite>

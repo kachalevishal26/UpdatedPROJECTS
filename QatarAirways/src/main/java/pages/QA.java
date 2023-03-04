@@ -1,0 +1,44 @@
+package pages;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class QA {
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.get(
+				"https://www.qatarairways.com/en-in/homepage.html?CID=SXIN23456993M&account=Google-SEA_SASC-IN-EN-Brand&campaign=IN-Brand-Hero-EN_exact&adgroup=qatar+airways&term=qatar+airways&gclid=CjwKCAiA5Y6eBhAbEiwA_2ZWIbMxM7f6m-6JsMdUqzi01nwNBgffMREElLepxBJMfjajIW_tX0VVFBoCYYQQAvD_BwE&gclsrc=aw.ds");
+
+		Actions action = new Actions(driver);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		driver.findElement(By.id("cookie-close-accept-all")).click();
+		driver.findElement(By.id("bw-from")).sendKeys("Mumbai");
+		action.sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).build().perform();
+		driver.findElement(By.id("bw-to")).sendKeys("Dubai");
+		action.sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).build().perform();
+//		driver.findElement(By.id("tripType")).click();
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//ul[@class='dropdown-menu show']")));
+		List<WebElement> typeList = driver.findElements(By.xpath("//ul[@class='dropdown-menu show']/li"));
+		for (int i = 0; i < typeList.size(); i++) {
+			String txt = typeList.get(i).getText();
+
+			if (txt.equalsIgnoreCase("Multi-city")) {
+				typeList.get(i).click();
+			}
+		}
+	}
+}

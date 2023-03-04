@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="testRail">
+	<parameter name="browser" value="chrome"/>
+	<test name="SearchTrain" enabled="true">
+		<classes>
+			<class name="testcases.SearchTrainTest">
+				<methods>
+					<include name="search"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

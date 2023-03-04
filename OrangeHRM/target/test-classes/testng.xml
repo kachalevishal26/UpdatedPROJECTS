@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="OrangeHRMTestSuite">
+	<listeners>
+		<listener class-name="com.demo.test.Listeners"/>			
+	</listeners>
+
+<parameter name="browserName" value="chrome"/>
+	<test name="unitTest">
+		<classes>
+			<class name="com.demo.test.testOrangeHRM">
+				<methods>
+					<include name="openBrowser" />
+					<include name="loginTest" />
+					<include name="verifyLogin" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,21 @@
+package testcases;
+
+import org.testng.annotations.BeforeTest;
+
+import base.TestBase;
+import pages.HomePage;
+
+public class HomePageTest extends TestBase {
+	HomePage homePage;
+	
+	public HomePageTest() {
+		initialization();
+		
+		homePage = new HomePage();
+	}
+	
+	@BeforeTest
+	public void setup() {
+		
+	}
+}

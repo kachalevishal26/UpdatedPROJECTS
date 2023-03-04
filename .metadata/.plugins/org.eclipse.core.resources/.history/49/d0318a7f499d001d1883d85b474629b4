@@ -1,0 +1,57 @@
+package com.fac.pages;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.fac.base.TestBase;
+import com.fac.utils.TestUtils;
+
+public class ProductPage extends TestBase {
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TestUtils.EXPLICIT_WAIT));
+	private static final Logger logger = LogManager.getLogger();
+
+	@FindBy(id = "products-orderby")
+	WebElement sortBy;
+
+	@FindBy(id = "products-pagesize")
+	WebElement displayProd;
+
+	@FindBy(id = "//div[@class='product-viewmode']/a")
+	WebElement viewMode;
+
+	public ProductPage() {
+		PageFactory.initElements(driver, this);
+	}
+
+//	public void viewAs() {
+//		List<WebElement> viewList = driver.findElements(By.xpath("//div[@class='product-viewmode']/a"));
+//		for (int i = 0; i < viewList.size(); i++) {
+//			String txt = viewList.get(i).getText();
+//			System.out.println(txt);
+//			if (txt.equals("List")) {
+//				viewList.get(i).click();
+//			}
+//		}
+//		logger.info("selecting view as");
+//	}
+
+	public void sortItems() {
+		logger.info("sorting the list");
+		wait.until(ExpectedConditions
+				.presenceOfAllElementsLocatedBy(By.xpath("//body/div[8]/div[4]/div[7]/div[1]/div[1]/div[2]/div[1]")));
+		WebElement sort = driver.findElement(By.id("products-orderby"));
+		Select select = new Select(sort);
+		select.selectByIndex(1);
+	}
+
+}

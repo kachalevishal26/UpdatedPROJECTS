@@ -1,0 +1,12 @@
+package testdata;
+
+import java.io.FileInputStream;
+
+import base.TestBase;
+
+public class DataSupplier extends TestBase {
+	public static void main(String[] args) {
+		String ExcelPath = "C:\\Users\\Asus\\eclipse-workspace\\TestLUMA\\src\\main\\java\\testdata\\LumaDemo.xlsx";
+		FileInputStream file = null;
+	}
+}

@@ -1,0 +1,27 @@
+package testdata;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import base.TestBase;
+
+public class DataSupplier extends TestBase {
+	public static void main(String[] args) {
+		String ExcelPath = "C:\\Users\\Asus\\eclipse-workspace\\TestLUMA\\src\\main\\java\\testdata\\LumaDemo.xlsx";
+		FileInputStream file = null;
+		XSSFWorkbook book;
+		XSSFSheet sheet = null;
+		int rows = sheet.getLastRowNum();
+		int cols = sheet.getRow(0).getLastCellNum();
+		
+		try {
+			file = new FileInputStream(ExcelPath);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
